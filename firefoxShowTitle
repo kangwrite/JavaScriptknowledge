@@ -1,0 +1,65 @@
+$('body').append('<div style="display:none;border:1px solid #7f7f7f;background-color:#fff;font-size:12px;position:absolute;padding:2px;z-index: 99999;" id="_altlayer"></div>');
+document.body.onmousemove=quickalt;
+document.body.onmouseover=getalt;
+document.body.onmouseout=restorealt;
+var tempalt='';
+
+var UA=navigator.userAgent.toLowerCase();
+var ISIE=(UA.indexOf("msie") > 0);
+function getEle(hw_){return document.getElementById(hw_);}
+
+function _Move(evn,o){
+	var _bW=document.body.clientWidth;
+	var _left1=document.body.scrollLeft+evn.clientX+10;
+	var _oW=o.offsetWidth;
+	var _left=((evn.clientX+_oW)>_bW)?(_left1-_oW-10):_left1;
+	if((evn.clientX+_oW)>_bW){_left=(_oW<evn.clientX)?(_left1-_oW-10):_left1;}
+
+	var _bH=document.body.clientHeight;
+	var _top1=document.body.scrollTop+evn.clientY+6;
+	var _oH=o.offsetHeight;
+	var _top=((evn.clientY+_oH)>_bH)?(_top1-_oH-6):_top1;
+	if((evn.clientY+_oH)>_bH){_top1=(_oH<evn.clientY)?(_top1-_oH-6):_top1;}
+	o.style.left=_left+'px';
+	o.style.top=_top+'px';
+}
+
+function getalt(hw_){
+	if(ISIE){evn=event}else{evn=hw_}
+	var eo = evn.srcElement?evn.srcElement:evn.target;
+	if(eo.title && (eo.title!=""|| (eo.title=="" && tempalt!=""))){
+		o = getEle("_altlayer");
+		_Move(evn,o);
+		o.style.display='';
+		tempalt=eo.title;
+		var tempbg=eo.getAttribute("altbg");
+		var tempcolor=eo.getAttribute("altcolor");
+		var tempborder=eo.getAttribute("altborder");
+		eo.title='';
+		o.innerHTML=tempalt;
+		if (tempbg!=null){o.style.background=tempbg}else{o.style.background="#fff"}
+		if (tempcolor!=null){o.style.color=tempcolor}else{o.style.color=tempcolor="infotext"}
+		if (tempborder!=null){o.style.border="1px solid "+tempborder;}else{o.style.border="1px solid #7f7f7f";}
+	}
+}
+function quickalt(hw_){
+	if(ISIE){evn=event}else{evn=hw_}
+	o = getEle("_altlayer");
+	if(o.style.display==""){
+		_Move(evn,o);
+	}
+}
+function restorealt(hw_){
+	if(ISIE){evn=event}else{evn=hw_}
+	var eo = evn.srcElement?evn.srcElement:evn.target;
+	eo.title=tempalt;
+	if(tempalt==""){
+		eo.removeAttribute("title");
+	}
+	tempalt="";
+	getEle("_altlayer").style.display="none";
+}
+function refreshTtile(){
+	var o = getEle("_altlayer");
+	o.innerHTML=tempalt;
+}
