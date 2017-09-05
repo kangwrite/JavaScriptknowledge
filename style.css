@@ -1,0 +1,23 @@
+
+/*input placeholder style rewrite start */
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #000; opacity:1; 
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #000;opacity:1;
+}
+input:-ms-input-placeholder{
+    color: #000;opacity:1;
+}
+input::-webkit-input-placeholder{
+    color: #000;opacity:1;
+}
+/*placeholder style rewrite end */
+
+
+/*input border style rewrite start*/
+input:focus{
+  box-shadow:0 0 4px #d6d7dc;
+  ourter:#d6d7dc solid thin;/*thick / none 浏览器默认颜色重写，注意此处不同于border*/
+}
+/*input border style rewrite end*/
