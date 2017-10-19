@@ -1,0 +1,17 @@
+<html>
+ <head>
+  <title>a</title
+ </head>
+ <body>
+    <iframe id="b">
+      <iframe id="c"></iframe>
+    </iframe>
+ </body>
+ <script type="text/javascript">
+    <!-- 
+    window  是父级A页面，目前层级是A嵌套B  B嵌套C
+    如果操作C以后，和B同级的D页面有操作想执行，可以先定位到A，然后寻找D，执行操作
+    -->
+    window.document.getElementById(b).contentWindow  // B的window对象
+ </script>
+</html>
