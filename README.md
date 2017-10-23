@@ -22,3 +22,6 @@ avalon里的一些坑
 
 7、2017.10.19
 iframe嵌套获取元素
+
+8、2017.10.23
+mac下webstorm配置node和npm环境
