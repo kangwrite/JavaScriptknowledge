@@ -21,3 +21,17 @@ input:focus{
   ourter:#d6d7dc solid thin;/*thick / none 浏览器默认颜色重写，注意此处不同于border*/
 }
 /*input border style rewrite end*/
+
+
+
+/* 元素的居中写法start*/
+#div{
+    margin:0 auto;/*正常文档流的元素，可以使用此方式水平居中*/
+    
+    position:absolute;
+    left:50%;
+    margin-left: **px; 
+    /*绝对定位，脱离了文档流，此时left是根据的父级元素的50%，也就是元素全部在中线右侧，此语句将一半元素移动到中线左侧，达到居中显示；
+    如果知道div元素的准确像素值，可以直接写，不知道的话，可以通过js计算然后赋值，也是一种方法。垂直方向的居中同理*/
+}
+/* 元素的居中写法end*/
