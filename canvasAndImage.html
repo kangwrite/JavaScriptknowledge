@@ -1,0 +1,16 @@
+<html>
+<!-- canvas.toDataURL ，返回的结果放到img src中-->
+<body>
+<script>
+var canvas = document.getElementsByTagName("canvas")[0]
+canvas.toDataURL();
+document.getElementById("pngHolder").appendChild(convertCanvasToImage(canvas));
+	function convertCanvasToImage(canvas) {
+				var image = new Image();
+				image.src = canvas.toDataURL("image.png");
+				return image;
+			}
+</script>
+<div id="pngHolder"></div>
+</body>
+</html>
