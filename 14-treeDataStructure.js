@@ -27,7 +27,7 @@ convert:function(rows){
 	    for(var i=0; i<rows.length; i++){  
 		var row = rows[i];  
 		if (row.parentName == ""){
-			row.pId = "root";
+		    row.pId = "root";
 		    nodes.push(row);  
 		}  
 	    }  
