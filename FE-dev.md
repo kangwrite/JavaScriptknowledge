@@ -1,5 +1,7 @@
  webstorm里的设置－－preference－－language&framework 中开启node 
  
+ 终端中ctrl+c退出npm
+ 
  
  sublime 下高亮展示vue文件
  
