@@ -2,6 +2,7 @@
  
  
  sublime 下高亮展示vue文件
+ 
  1、在git上下载高亮展示语法插件vue-syntax-highlight，解压到本地
  
  2、进入sublime，选择菜单项“Preferences->Browse Packages...”，在打开的路径中新建Vue文件夹，将解压出的文件移动到此文件夹中
