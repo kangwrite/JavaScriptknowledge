@@ -16,3 +16,5 @@
  sublime下增加快捷键设置
  
  preferences--key bindings，然后添加内容
+ 
+常用的快捷键，找不到，可以先百度出来默认的，然后去设置中改成自己喜欢的。比如sublime中ctrl+shift+k是删除整行，我习惯用ctrl+d，先去搜索ctrl+shirt+k，然后改写，保存就好
