@@ -12,3 +12,7 @@
  3、sublime中快捷键“ctrl+shift+p”，在打开的packages输入框中输入vue，选择“Set Syntax:Vue Component”进行加载
  
  4、重启sublime，打开vue文件即可高亮展示
+ 
+ sublime下增加快捷键设置
+ 
+ preferences--key bindings，然后添加内容
