@@ -49,3 +49,6 @@ canvas转换为img
 
 15、2018.02.11
 es6语法整理
+
+16、2018.02.24
+异步的Macrotasks和Microtasks
