@@ -1,0 +1,27 @@
+使用xshell，编辑docker容器内的文件
+
+输入地址、用户名、密码进入连接
+
+docker ps列出正在运行的容器
+
+docker exec -it [容器id] /bin/bash 进入这个容器
+
+ls 列出当前的目录
+
+vi 文件名  打开文件
+
+i 编辑
+
+esc 退出编辑
+
+shift+： wq 保存并退出页面
+
+!q 不保存退出
+
+
+
+gzip -c index.html > index.html.gz  压缩
+sudo supervisorctl restart all 重启服务
+
+
+
