@@ -7,6 +7,7 @@ docker ps列出正在运行的容器
 docker exec -it [容器id] /bin/bash 进入这个容器
 
 ls 列出当前的目录
+ls -la 列出所有文件的详细信息，包括隐藏文件
 
 vi 文件名  打开文件
 
@@ -18,10 +19,11 @@ d$  从当前位置删除到行位
 
 dd  删除整行
 
+rm -r 文件名  删除文件
+
 shift+： wq 保存并退出页面
 
 q! 不保存退出
-
 
 
 gzip -c index.html > index.html.gz  压缩
