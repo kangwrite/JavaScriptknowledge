@@ -16,6 +16,14 @@ function aa(bool) {
 aa(true); //test 被声明，值为hello;
 aa(false); //报错，test未定义
 
+
+var tmp = 123;
+
+if (true) {
+  tmp = 'abc'; // ReferenceError
+  let tmp;
+}
+在块作用域内的声明之前 调用变量，即使外部作用域有全局变量，仍然会报错
 <!--
   2、模板字符串
   表达式嵌入字符串进行拼接，用${}来区分;
