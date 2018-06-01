@@ -86,7 +86,12 @@ if (true) {
     const [first, second] = color  //数组解构的key可以任意取名
     console.log(first) //'red'
     console.log(second) //'blue'
-    
+    //数组解构根据下标来对应，对象结构按照key匹配
+    //但是需要注意以下的问题
+    let { bar, foo } = { foo: "aaa", bar: "bbb" };   //此处是普通按照属性值来匹配
+
+    let { foo: baz } = { foo: 'aaa', bar: 'bbb' };   //baz：aaa
+    //foo是匹配的模式，baz才是变量。真正被赋值的是变量baz，而不是模式foo。
  <!-- 
     6、展开运算符
     将元素在新变量内部展开，可以理解为融入或者提取  ...
