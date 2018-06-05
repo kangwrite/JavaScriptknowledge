@@ -1,8 +1,8 @@
 <!-- es6常用语法-->
 <!--
-  1、变量声明 let  常量声明 const 
+//   1、变量声明 let  常量声明 const 
   
-  注意：let和const均为块级作用域，不会进行变量提升，作用域为{}内部,const 不可改变值
+//   注意：let和const均为块级作用域，不会进行变量提升，作用域为{}内部,const 不可改变值
 -->
 function aa(bool) {
     const name = "connie";
@@ -29,9 +29,9 @@ if (true) {
 
 
 <!--
-  2、模板字符串
-  表达式嵌入字符串进行拼接，用${}来区分;
-  反引号 `` 拼接多行字符串
+//   2、模板字符串
+//   表达式嵌入字符串进行拼接，用${}来区分;
+//   反引号 `` 拼接多行字符串
 -->
     //es5 
     var name = 'lux'
@@ -43,21 +43,11 @@ if (true) {
     const template = `<div>
         <span>hello world</span>
     </div>`
-    <!--
-    字符串提供的几个好用的方法
-    str.includes('y') 返回布尔值
-    str.repeat(n) 字符串重复的次数
-    -->
-    //for of 可以遍历字符串
-let stringChar = "abc";
-for(let a of stringChar){
-  console.info(a)
-} 
-// a   b   c
+
  <!--
-    3、箭头函数
-    省略return ，继承上下文的this，无需function创建，
-    只有一个参数时，可省略参数的（）
+//     3、箭头函数
+//     省略return ，继承上下文的this，无需function创建，
+//     只有一个参数时，可省略参数的（）
  -->
  var people = name => 'hello' + name;
  var people = (name, age) => {
@@ -66,8 +56,8 @@ for(let a of stringChar){
     } 
     
 <!--
-  4、对象扩展
-  对象方法简写
+//   4、对象扩展
+//   对象方法简写
 -->
 
  const people = {
@@ -78,7 +68,7 @@ for(let a of stringChar){
     }
     
  <!--
-    5、对象和数组解构
+    //5、对象和数组解构
  -->
     const people = {
         name: 'lux',
@@ -98,8 +88,8 @@ for(let a of stringChar){
     let { foo: baz } = { foo: 'aaa', bar: 'bbb' };   //baz：aaa
     //foo是匹配的模式，baz才是变量。真正被赋值的是变量baz，而不是模式foo。
  <!-- 
-    6、展开运算符
-    将元素在新变量内部展开，可以理解为融入或者提取  ...
+//     6、展开运算符
+//     将元素在新变量内部展开，可以理解为融入或者提取  ...
  -->
  
     //数组
@@ -128,18 +118,69 @@ for(let a of stringChar){
     
      
   <!--
-      7、import 和export  导入和导出模块
+     // 7、import 和export  导入和导出模块
   -->
-  待完善
+ // 待完善
   
    <!--
-      8、promise  用同步的方式去写异步的代码
+      //8、promise  用同步的方式去写异步的代码
   -->
-  待完善
+  //待完善
   
   <!--
-      9、generator  生成器函数
+      //9、generator  生成器函数
   -->
-  待完善
+  //待完善
   
+  <!--
+    //10、字符串方法
+  -->
+
+    //for of 可以遍历字符串
+    let stringChar = "abc";
+    for(let a of stringChar){
+      console.info(a)
+    } 
+    // a   b   c
+
+    //新增 includes()：返回布尔值，表示是否找到了参数字符串。
+    //startsWith()：返回布尔值，表示参数字符串是否在原字符串的头部。
+    endsWith()
+    //：返回布尔值，表示参数字符串是否在原字符串的尾部。
+    //第二个参数代表只寻找前几个字符
+
+    str.repeat(n)   //字符串重复的次数  
+    'x'.repeat(2)   // => 'xx' 
+
+
+    //padStart()用于头部补全，padEnd()用于尾部补全
+    'x'.padStart(5, 'ab') // 'ababx'
+    'x'.padStart(4, 'ab') // 'abax'
+
+    'x'.padEnd(5, 'ab') // 'xabab'
+    'x'.padEnd(4, 'ab') // 'xaba'
+
+  <!-- 
+    //11、Number 对象 和Math对象 以及一些计算方法
+  -->
+    //es6为了逐步减少全局方法，将一些方法转移到了Number对象上,行为不变
+    // ES5的写法
+    parseInt('12.34') // 12
+    parseFloat('123.45#') // 123.45
+
+    // ES6的写法
+    Number.parseInt('12.34') // 12
+    Number.parseFloat('123.45#') // 123.45
+    
+
+    Number.isInteger()   //用来判断一个数值是否为整数。
+    
+    //Math.trunc方法用于去除一个数的小数部分，返回整数部分  对于空值和无法截取整数的值，返回NaN
+    //Math.sign方法用来判断一个数到底是正数、负数、还是零
+
+
+    ** //指数运算符
+    2 ** 3  // 8
+    2 **= 3  //2 = 2**3  8
+    
   
