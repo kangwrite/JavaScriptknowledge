@@ -48,7 +48,12 @@ if (true) {
     str.includes('y') 返回布尔值
     str.repeat(n) 字符串重复的次数
     -->
- 
+    //for of 可以遍历字符串
+let stringChar = "abc";
+for(let a of stringChar){
+  console.info(a)
+} 
+// a   b   c
  <!--
     3、箭头函数
     省略return ，继承上下文的this，无需function创建，
