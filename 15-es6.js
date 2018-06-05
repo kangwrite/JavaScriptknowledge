@@ -45,16 +45,29 @@ if (true) {
     </div>`
 
  <!--
-//     3、箭头函数
+//     3、函数
+ -->
+  //函数默认值,避免函数参数为false时，转变为了默认值
+  function log(x, y = 'World') {
+    console.log(x, y);
+  }
+  log('Hello') // Hello World
+  log('Hello', 'China') // Hello China
+  log('Hello', '') // Hello
+         
+
+
+//     箭头函数 
 //     省略return ，继承上下文的this，无需function创建，
 //     只有一个参数时，可省略参数的（）
- -->
  var people = name => 'hello' + name;
  var people = (name, age) => {
         const fullName = 'h' + name
         return fullName
     } 
     
+ 
+ 
 <!--
 //   4、对象扩展
 //   对象方法简写
