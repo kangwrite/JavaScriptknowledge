@@ -31,3 +31,4 @@ sudo supervisorctl restart all 重启服务
 
 
 
+docker commit 容器id 192.168.12.16:5000/yunqi/onlyoffice 
