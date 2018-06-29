@@ -25,6 +25,9 @@ shift+： wq 保存并退出页面
 
 q! 不保存退出
 
+/keyword  页面内关键字搜索
+grep  keyword 文件名   搜索所有含此关键字的文件
+
 
 gzip -c index.html > index.html.gz  压缩
 sudo supervisorctl restart all 重启服务
