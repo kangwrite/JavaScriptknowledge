@@ -1,0 +1,19 @@
+<html>
+  <head>
+  </head>
+  <style>
+    .itemBorder{width:602px;height:2px;background:#35abed;margin:0 49px;position: absolute;bottom: 0px;}
+
+    .itemBorder:before{ width: 0px;height: 0px;border: 14px transparent solid;border-bottom-color: #35abed;position: absolute;top: -26px;left: 32%;content: "";}
+
+    .itemBorder:after{width: 0px;height: 0px;border: 14px transparent solid;border-bottom-color: #fff;position: absolute;top: -23px;left: 32%;content: "";}
+
+<!-- 最终效果是画出向上的三角，使用的方法是，在要画出三角形的位置，增加一个before的元素，定位到具体位置，此元素无长宽，只有边框，且只有一个边框有颜色
+     然后再增加一个小一些的白色三角 after，挡住内部的颜色，则只留下一个三角的轮廓
+-->
+  </style>
+  <body>
+    <div class="itemBorder"></div>
+  </body>
+</html>
+
