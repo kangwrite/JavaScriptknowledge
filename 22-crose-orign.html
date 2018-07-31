@@ -1,0 +1,37 @@
+<html>
+<head>
+</head>
+<body>
+  <script>
+  //jsonp跨域的原理，就是浏览器加载非同源的script标签代码不受同源策略影响，因此发送ajax请求，
+  //server返回可执行的函数，在浏览器页面通过script标签引入了这段可执行的代码，处理数据
+  
+  //也可以部署线上以后，通过nginx代理到同源，免受同源策略影响
+  
+  //如何定义跨域：协议、端口、域名中的一个或多个不同，则为不同源，js请求资源时会受同源策略影响，为跨域
+  
+    function sendAjax(){
+      $.ajax({
+                url: url,
+                type : "GET",
+                dataType: "jsonp",
+                jsonp : 'callback',
+                crossDomain: true,
+                jsonpCallback: "handleResponse",
+                data : {
+                    nodeId : nodeId
+                }, 
+                async:false,
+                success:function(response, status, xhr){
+                    if(response.code == 0){
+                    
+                    }else{
+                    }
+                },
+                error:function(){
+                }
+            })
+    }
+  </script>
+</body>
+</html>
