@@ -1,0 +1,8 @@
+Yarn -  node环境依赖管理安装工具
+npm  -  node package management node 包管理工具
+
+babel - 将es6代码语法转换为可适配浏览器的es5语法，但是并不会转换新的API
+
+因此 为使浏览器能使用新的API，还需要特定转换工具或polyfill 模拟新特性
+
+fetch - 
