@@ -4,6 +4,8 @@
 
 2、本地安装git 配置 user.name  user.email
 
+windows下安装git后，使用git --version查看， 命令行提示git不是可用命令，是因为未配置环境变量，增加bin  和libexe/git-core的配置，重启即可
+
 3、将代码下载到本地
  终端进入到想要下载项目的位置 运行  git clone + github项目SSH地址
  
