@@ -1,0 +1,15 @@
+<html>
+<head>
+</head>
+<body>
+<div class="outer" style="overflow:hidden">
+  <div class="inner" style="float:left;"></div>
+</div>
+<!--
+ BFC 是block formatting context  块结构化上下文
+ 引到此问题 是内层元素设置float后，外层元素高度为0，内层元素并未撑开外层元素。
+ 
+ BFC的用处在于 ，被触发此特性的元素，内层浮动元素不会乱跑，能够撑开空间，产生边界
+-->
+</body>
+</html>
