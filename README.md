@@ -85,3 +85,6 @@ css  BFC
 
 27、css3 animation、transition
 css3动画
+
+28、移动端真机调试
+weinre、spy-debugger
