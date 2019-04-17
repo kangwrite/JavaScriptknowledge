@@ -5,18 +5,67 @@ a
   font-size 5px
 
 变量
+ex:
+font-size = 14px
+
+body
+  font font-size Arial, sans-seri
+
 插值
-混合书写
+
+ex:
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+border-radius()
+  vendor('border-radius', arguments)
+
+box-shadow()
+  vendor('box-shadow', arguments)
+
+button
+  border-radius 1px 2px / 3px 4px
+  
+
+混合书写 -- 方法
+
+混合书写和方法定义方法一致，但是方法可以有返回值，混合书写是作为属性到选择器中
+两者都是提供通用的内容，供选择器使用
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+
+form input[type=button]
+  border-radius 5px   --混入
+  border-radius(5px)  --方法
+
+
 算术
 强制类型转换
 动态导入
 条件
+后缀条件，当右边表达式为真的时候执行左边的操作对象
+ex：
+negative(n)
+  error('无效数值') unless n is a 'unit'
+  return yes if n < 0
+  no
+
 迭代
+ex:
+body
+  for num in 1 2 3
+    foo num
 嵌套选择
 父级参考
 变量函数调用
 词法作用域
 内置函数(>25)
+可以直接使用的一些 例如ceil、floor、round、min、max、append等方法
+
 内部语言函数
 压缩可选
 图像内联可选
