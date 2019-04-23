@@ -75,4 +75,18 @@ body
 CSS字面量
 字符转义---使用\
 TextMate捆绑
-以及其他更多
+
+
+stylus 的编译
+全局安装stylus后，进入项目内，
+1、stylus dirName
+则该文件夹内的每个styl文件单独编译成对应name的css文件；
+
+2、
+-w 监听源文件，文件改变则目标css改变
+-c css文件压缩
+-o 生成的css文件放入目标目录中
+
+3、思考如何将多个文件压缩为一个css，可能需要引入grunt或者gulp或者webpack命令压缩；
+目前使用styles dirName/ -o a.css命令，a.css是文件夹下最后一个文件的执行结果。
+
