@@ -89,4 +89,19 @@ stylus 的编译
 
 3、思考如何将多个文件压缩为一个css，可能需要引入grunt或者gulp或者webpack命令压缩；
 目前使用styles dirName/ -o a.css命令，a.css是文件夹下最后一个文件的执行结果。
+结合grunt命令，将文件压缩成了一个文件，附上部分代码：
+ stylus:{
+            build: {
+                options: {
+                    linenos: false,
+                    compress: true
+                },
+                files: [{
+                    'styles/index.css': ['styles/css.styl','styles/css2.styl']
+                }]
+            }
+        },
+        
+ // 告诉grunt当我们在终端中输入grunt时需要做些什么
+    grunt.registerTask('default', ['stylus','watch']);
 
