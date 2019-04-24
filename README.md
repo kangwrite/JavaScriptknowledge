@@ -83,10 +83,16 @@ sass
 26、2019.01.09
 css  BFC
 
-27、css3 animation、transition
+27、2019.3.10
+css3 animation、transition
 css3动画
 
-28、移动端真机调试
+28、2019.3.25
+移动端真机调试
 weinre、spy-debugger
 
-29、stylus 特性
+29、2019.4.14
+stylus 特性
+
+30、2019.4.24
+grunt使用以及与stylus的结合
