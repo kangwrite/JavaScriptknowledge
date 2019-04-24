@@ -1,4 +1,5 @@
 grunt
+
 1、npm安装grunt
 npm install grunt --save-dev
 2、安装脚手架
@@ -29,6 +30,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     'styles/index.css': ['styles/css.styl','styles/css2.styl']
+                    //配置将styl文件执行到一个index.css文件中
                 }]
             }
         },
@@ -46,6 +48,6 @@ module.exports = function(grunt) {
     // 告诉grunt我们将使用插件
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-stylus');
-    // 告诉grunt当我们在终端中输入grunt时需要做些什么
+    // 告诉grunt当我们在终端中输入grunt时需要做些什么  执行grunt命令时的任务
     grunt.registerTask('default', ['stylus','watch']);
 };
