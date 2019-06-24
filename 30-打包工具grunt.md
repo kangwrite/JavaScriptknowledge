@@ -27,6 +27,7 @@ Gruntfile由以下几部分构成：
 ex:
 
 /// 包装函数wrapper
+
 module.exports = function(grunt) {
 
     // 任务配置,所有插件的配置信息
