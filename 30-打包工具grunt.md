@@ -28,31 +28,57 @@ ex:
 
 /// 包装函数wrapper
 module.exports = function(grunt) {
+
     // 任务配置,所有插件的配置信息
+    
     grunt.initConfig({
+    
         pkg: grunt.file.readJSON('package.json'),
+        
         stylus:{
+        
             build: {
+            
                 options: {
+                
                     linenos: false,
+                    
                     compress: true
+                    
                 },
+                
                 files: [{
+                
                     'styles/index.css': ['styles/css.styl','styles/css2.styl']
+                    
                     //配置将styl文件执行到一个index.css文件中
+                    
                 }]
+                
             }
+            
         },
+        
         // watch插件的配置信息
+        
         watch: {
+        
             another: {
+            
                 files: ['styles/*','styles/*.styl'],
+                
                 tasks: ['stylus'],
+                
                 options: {
+                
                     livereload: 1337
+                    
                 }
+                
             }
+            
         }
+        
     });
     
     // 告诉grunt我们将使用插件
