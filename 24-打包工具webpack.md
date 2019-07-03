@@ -22,7 +22,19 @@ npm install --save-dev webpack
  
  此路径是common.js 和bundle.js同在根目录下，否则可以使用 webpack js/common.js -o dist/bundle.js
  
- 在终端中进行webpack命令打包，文件过多时会很复杂，所以一般使用配置文件配置打包命令
+ 在终端中进行webpack命令打包，文件过多时会很复杂，所以可以使用配置文件配置打包命令
+ 
+对于使用webpack.config.js配置文件配置webpack命令的情况，在根目录下新建webpack.config.js文件，然后输入
+module.exports = {
+  entry:  __dirname + "/app/main.js",//入口文件
+  output: {
+    path: __dirname + "/public",//打包后的文件存放的地方
+    filename: "bundle.js"//打包后输出文件的文件名
+  }
+}
+“__dirname”是node.js中的一个全局变量，它指向当前执行脚本所在的目录。
+
+然后命令行运行webpack即可，会自动读取webpack.config.js的内容
  
 5、此时打包出的文件是压缩版本，现在webpack提供了 开发版  上线版 和none ，需要在package.json增加配置
 
@@ -51,6 +63,21 @@ npx webpack ./common.js -o bundle.js --mode development
 npx webpack ./common.js -o bundle.js --mode production 
 
 对于npx命令，是新版的npm增加的模块，如果执行时提示不是内部或外部命令，升级npm即可
+
+
+
+其他
+npm install --save-dev webpack-dev-server  安装使用本地服务器，然后再webpack.config.js里配置devserver
+devServer: {
+    contentBase: "./public",//本地服务器所加载的页面所在的目录
+    historyApiFallback: true,//不跳转
+    inline: true//实时刷新
+  } 
+  package.json的scripts中配置"server": "webpack-dev-server --open"，然后命令行 npm run server即可开启本地服务器。
+
+
+
+
 
 
 
