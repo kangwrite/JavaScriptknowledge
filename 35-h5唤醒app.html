@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<a href="baidumap://map/direction?origin=中关村&destination=五道口&mode=driving&region=北京  " style="font-size:50px;">href打开app</a>
+<button style="font-size:50px;" id="openapp">ios window.open打开app</button>
+<a href="bdapp://map/newsassistant?src=andr.baidu.openAPIdemo">安卓出行早晚报页面</a>
+<script>
+window.onload = function(){
+  //思路是在h5页面调用app的协议唤醒
+	var openApp = document.getElementById("openapp");
+	openApp.addEventListener("click",function(){
+		try{
+			window.open("iosamap://navi?sourceApplication=applicationName&backScheme=applicationScheme&poiname=fangheng&poiid=BGVIS&lat=36.547901&lon=104.258354&dev=1&style=2")
+		}catch(e){
+			window.open("http://map.baidu.com/zt/qudao/newfengchao/1012337a/html/slide.html")
+		}
+	})
+}
+</script>
+<!-- scheme1://host1:8080/path1?query1=1&query2=true -->
+</body>
+</html>
