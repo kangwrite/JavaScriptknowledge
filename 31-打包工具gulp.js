@@ -4,6 +4,8 @@ npm install --global gulp
 //开发依赖安装
 npm install --save-dev gulp
 
+npm install gulp-uglify gulp-concat gulp-clean-css gulp-rev-append gulp-minify-css -g
+npm install gulp-uglify gulp-concat gulp-clean-css gulp-rev-append gulp-minify-css --save -dev
 //引入需要用到到插件
 var gulp = require('gulp');
  		uglify = require('gulp-uglify'),
